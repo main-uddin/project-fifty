@@ -28,7 +28,7 @@ const PracticeRefs = () => {
         <PracticeForwardRef ref={parentsRef} />
       </div>
 
-      <div className="border-y py-5 mt-5">
+      <div className="border-b py-5">
         <h3 className="mb-3 text-lg font-semibold">Detect outside click - custom hook</h3>
         <OutsideClick />
       </div>
