@@ -1,0 +1,22 @@
+.checkbox_container > label {
+  font-size: 16px;
+  color: red;
+}
+
+*::selection {
+  background: yellow;
+  color: black;
+}
+
+p:first-line {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: blue;
+}
+p::first-letter {
+  font-size: 200%;
+  color: green;
+  float: left;
+  line-height: 1;
+  padding-right: 4px;
+}
