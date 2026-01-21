@@ -15,7 +15,9 @@ const PracticeRefs = () => {
   };
   return (
     <div>
-      <h2 className="text-2xl font-bold leading-7 mb-5">Practice Refs Component</h2>
+      <h2 className="text-2xl font-bold leading-7 mb-5 text-muted-background">
+        Practice Refs Component
+      </h2>
 
       <div className="border-y py-5">
         <h3 className="mb-3 text-lg font-semibold">Forward refs and focus</h3>

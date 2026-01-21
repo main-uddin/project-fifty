@@ -14,7 +14,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <div className="flex flex-col flex-1">
         <Navbar toggleSidebar={() => setIsOpen(!isOpen)} />
 
-        <main className="flex-1 overflow-y-auto p-4 bg-gray-50">{children}</main>
+        <main className="flex-1 overflow-y-auto p-4">{children}</main>
       </div>
     </div>
   );

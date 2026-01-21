@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <div className="p-10">
-      <h1>PROJECT FIFTY</h1>
+      <h1 className="text-2xl font-bold text-foreground">PROJECT FIFTY</h1>
     </div>
   );
 }
