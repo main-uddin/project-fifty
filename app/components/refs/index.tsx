@@ -1,9 +1,13 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import OutsideClick from './OutsideClick';
 import PracticeForwardRef from './PracticeForwardRef';
+import Modal from './modal';
+import TestModal from './testModal';
 
 const PracticeRefs = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenTestModal, setIsOpenTestModal] = useState(false);
   const parentsRef = useRef<HTMLInputElement>(null);
 
   const handleParentButtonClick = () => {
@@ -33,6 +37,20 @@ const PracticeRefs = () => {
       <div className="border-b py-5">
         <h3 className="mb-3 text-lg font-semibold">Detect outside click - custom hook</h3>
         <OutsideClick />
+      </div>
+
+      <div className="border-b py-5">
+        <button className="mb-3 text-lg font-semibold" onClick={() => setIsOpen(true)}>
+          Open Modal
+        </button>
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      </div>
+
+      <div className="border-b py-5">
+        <button className="mb-3 text-lg font-semibold" onClick={() => setIsOpenTestModal(true)}>
+          Open Test Modal
+        </button>
+        <TestModal isOpen={isOpenTestModal} onClose={() => setIsOpenTestModal(false)} />
       </div>
     </div>
   );
