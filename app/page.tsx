@@ -1,10 +1,9 @@
 'use client';
-import PracticeRefs from './components/refs';
 
 export default function Home() {
   return (
     <div className="p-10">
-      <PracticeRefs />
+      <h1 className="text-2xl font-bold text-foreground">PROJECT FIFTY</h1>
     </div>
   );
 }
