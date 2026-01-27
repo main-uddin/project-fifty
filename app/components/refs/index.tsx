@@ -4,11 +4,20 @@ import OutsideClick from './OutsideClick';
 import PracticeForwardRef from './PracticeForwardRef';
 import Modal from './modal';
 import TestModal from './testModal';
+import Dropdown from './dropdown';
+import TestDropdown from './testdropdown';
 
 const PracticeRefs = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenTestModal, setIsOpenTestModal] = useState(false);
   const parentsRef = useRef<HTMLInputElement>(null);
+
+  const [dropdownVale, setDropdownValue] = useState<{
+    id: string;
+    label: string;
+    value: string;
+  } | null>(null);
+  const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false);
 
   const handleParentButtonClick = () => {
     console.log(parentsRef.current?.value);
@@ -51,6 +60,33 @@ const PracticeRefs = () => {
           Open Test Modal
         </button>
         <TestModal isOpen={isOpenTestModal} onClose={() => setIsOpenTestModal(false)} />
+      </div>
+
+      <div className="border-b py-5">
+        <h3>Test dropdown</h3>
+        <TestDropdown
+          options={[
+            { id: '1', label: 'Orange', value: 'orange' },
+            { id: '2', label: 'Apple', value: 'apple' },
+            { id: '3', label: 'Mango', value: 'mango' },
+          ]}
+          onChange={(value) => setDropdownValue(value)}
+          selectedValue={dropdownVale}
+          placeholder="Select ..."
+          isOpen={isOpenDropdown}
+          setOpen={(value) => setIsOpenDropdown(value)}
+        />
+      </div>
+
+      <div className="border-b py-5">
+        <Dropdown
+          options={[
+            { label: 'Orange', value: 'orange' },
+            { label: 'Apple', value: 'apple' },
+            { label: 'Mango', value: 'mango' },
+          ]}
+          onChange={(e) => console.log(e)}
+        />
       </div>
     </div>
   );
