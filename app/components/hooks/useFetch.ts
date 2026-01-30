@@ -13,7 +13,7 @@ const useFetch = async <T>(): Promise<FETCHRESULT<T>> => {
       reject('promise rejected!');
     }
   });
-  return null;
+  return promise;
 };
 
 export default useFetch;
