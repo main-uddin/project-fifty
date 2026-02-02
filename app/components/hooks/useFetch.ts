@@ -1,18 +1,23 @@
 type FETCHRESULT<T> = {
   data: T | null;
+  error?: string | null;
 };
 
 const isTrue = true;
 
-const useFetch = async <T>(): Promise<FETCHRESULT<T>> => {
-  const promise = new Promise((resolve, reject) => {
+const data = { name: 'main uddin' };
+const useFetch = async <T>(url: string): Promise<FETCHRESULT<T>> => {
+  const promise = new Promise<FETCHRESULT<T>>((resolve, reject) => {
     if (isTrue) {
-      resolve('promise resolved!');
+      const res = fetch(url);
+      console.log('res: ', res);
+      resolve({ data: data as T, error: null });
     }
     {
-      reject('promise rejected!');
+      reject({ data: null, error: 'promise rejected!' });
     }
   });
+
   return promise;
 };
 

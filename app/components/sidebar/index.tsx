@@ -25,6 +25,9 @@ const Sidebar = ({ isOpen }: Props) => {
         <Link href="/contextapi" className="block p-2 rounded hover:bg-gray-700">
           Context API
         </Link>
+        <Link href="/css" className="block p-2 rounded hover:bg-gray-700">
+          CSS
+        </Link>
       </nav>
     </aside>
   );

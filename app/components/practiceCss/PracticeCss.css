@@ -1,0 +1,72 @@
+.container {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  column-count: 3;
+  column-gap: 0px;
+}
+.flex-item {
+  border: 1px solid black;
+  display: flex;
+  width: 100%;
+  break-inside: avoid;
+}
+.one {
+  height: 200px;
+  background: red;
+}
+.two {
+  height: 100px;
+  background: purple;
+}
+.three {
+  height: 300px;
+  background: green;
+}
+.four {
+  height: 50px;
+  background: blue;
+}
+.five {
+  height: 100px;
+  background: gray;
+}
+.six {
+  height: 300px;
+  background: pink;
+}
+
+.column {
+  column-count: 8;
+}
+
+.masonry {
+  column-count: 3;
+  column-gap: 0px;
+}
+
+.masonry img {
+  width: 100%;
+  display: block;
+  /* margin-bottom: 16px; */
+
+  /* KEY LINE */
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 8px;
+  grid-auto-flow: dense;
+  gap: 16px;
+}
+
+.grid img {
+  width: 100%;
+  display: block;
+
+  /* 🔥 KEY PART */
+  grid-row: span 20;
+}

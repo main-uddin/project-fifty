@@ -2,10 +2,15 @@
 
 import useCounter from './components/hooks/useCounter';
 import useToggle from './components/hooks/useToggle';
+import useFetch from './components/hooks/useFetch';
+import { use } from 'react';
 
 export default function Home() {
   const { counter, increment, decrement, reset } = useCounter(98);
   const { value, toggle } = useToggle();
+  const fetchData = async () => {
+    const data = await useFetch<{}>('https://jsonplaceholder.typicode.com/users/1');
+  };
 
   return (
     <div className="p-10">
@@ -29,6 +34,12 @@ export default function Home() {
       <div className="py-5">
         <button onClick={toggle} className={`px-8 py-2 rounded-full border`}>
           {value ? 'OFF' : 'ON'}
+        </button>
+      </div>
+
+      <div className="py-5">
+        <button className="px-4 py-4 border rounded" onClick={fetchData}>
+          FETCH DATA
         </button>
       </div>
     </div>
