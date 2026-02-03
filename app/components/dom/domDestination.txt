@@ -1,0 +1,203 @@
+✅ MUST-KNOW DOM APIs (Frontend Essential Set)
+
+1️⃣ Element selection & traversal (daily use)
+
+You must be fluent here.
+
+APIs
+
+document.querySelector
+
+document.querySelectorAll
+
+Element.closest
+
+parentElement
+
+children
+
+nextElementSibling
+
+previousElementSibling
+
+Why it matters
+
+finding elements
+
+event delegation
+
+building components without frameworks
+
+
+2️⃣ DOM manipulation (content & structure)
+
+How UI actually changes.
+
+APIs
+
+createElement
+
+append, prepend
+
+remove
+
+replaceWith
+
+cloneNode
+
+innerHTML (know when not to use it)
+
+textContent
+
+
+3️⃣ Attributes, classes & dataset (state on elements)
+APIs
+
+classList.add / remove / toggle / contains
+
+getAttribute
+
+setAttribute
+
+removeAttribute
+
+dataset
+
+
+4️⃣ Events & event flow (VERY IMPORTANT 🔥)
+APIs
+
+addEventListener // done
+
+removeEventListener // done
+
+event.target // done
+
+event.currentTarget // done
+
+event.stopPropagation // done
+
+What is stopPropagation()? (Interview Answer)
+event.stopPropagation() stops an event from propagating further through the DOM, meaning it prevents the event from reaching parent elements during capturing or bubbling, but it does not prevent the browser’s default behavior.
+
+event.preventDefault // done
+
+What is preventDefault()? (Interview Answer)
+event.preventDefault() prevents the browser’s default behavior for an event, but it does NOT stop event propagation.
+
+Concepts (more important than APIs)
+
+event bubbling // done
+
+Event Bubbling (Interview Answer)
+Event bubbling means that when an event happens on an element, it first runs on that element and then propagates upward through its parent elements until it reaches the document.
+
+capturing // done
+
+Event Capturing (Interview Answer)
+Event capturing is the opposite of bubbling. The event starts from the top of the DOM tree and travels down to the target element. Only handlers registered with capture: true run in this phase.
+
+event delegation // done
+
+🔹 Event Delegation (Interview Answer)
+Event delegation is a pattern where a single parent element handles events for its child elements by relying on event bubbling and checking event.target.
+
+
+5️⃣ Layout, size & position (your getBoundingClientRect area)
+APIs
+
+getBoundingClientRect ⭐
+
+offsetWidth / offsetHeight
+
+clientWidth / clientHeight
+
+scrollTop / scrollLeft
+
+scrollHeight
+
+Real use case
+
+sticky headers
+
+tooltips
+
+virtual lists
+
+infinite scroll
+
+
+6️⃣ Focus, accessibility & forms (EU companies care a LOT)
+APIs
+
+document.activeElement
+
+focus()
+
+blur()
+
+tabIndex
+
+setCustomValidity
+
+checkValidity
+
+
+7️⃣ Browser interaction & lifecycle
+APIs
+
+DOMContentLoaded
+
+window.onload
+
+requestAnimationFrame
+
+requestIdleCallback (basic idea)
+
+
+8️⃣ Scrolling & viewport
+APIs
+
+window.scrollTo
+
+window.scrollBy
+
+Element.scrollIntoView
+
+IntersectionObserver ⭐⭐⭐
+
+
+9️⃣ Mutation & observation (advanced but valuable)
+APIs
+
+MutationObserver
+
+ResizeObserver
+
+Real use case
+
+detect DOM changes
+
+responsive components
+
+
+1️⃣0️⃣ Performance & repaint awareness (bonus)
+Concepts
+
+reflow vs repaint
+
+layout thrashing
+
+batch DOM reads/writes
+
+🗺️ Suggested learning order (follow this)
+
+Events & delegation // done
+
+DOM traversal
+
+Layout APIs (getBoundingClientRect)
+
+Accessibility & focus
+
+Observers
