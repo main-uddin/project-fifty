@@ -35,9 +35,12 @@ const TestDropdown: React.FC<DropdownProps> = ({
     const updatePosition = () => {
       const buttonRect = buttonRef.current!.getBoundingClientRect();
 
-      const menuHeight = menuRef.current!.getBoundingClientRect();
+      const menuRect = menuRef.current!.getBoundingClientRect();
       const spaceBelow = window.innerHeight - buttonRect.bottom;
-      const shouldFlip = spaceBelow < menuHeight?.height;
+      const shouldFlip = spaceBelow < menuRect?.height;
+
+      const wouldBeRightEdge = buttonRect.left + menuRect.width;
+      const shouldFlipX = wouldBeRightEdge > window.innerWidth;
 
       if (buttonRect.bottom < 0 || buttonRect.top > window.innerHeight) {
         setOpen(false);
@@ -46,26 +49,35 @@ const TestDropdown: React.FC<DropdownProps> = ({
 
       let top;
       if (shouldFlip) {
-        top = buttonRect.top + window.scrollY - menuHeight?.height;
+        top = buttonRect.top + window.scrollY - menuRect?.height;
       } else {
         top = buttonRect.bottom + window.scrollY;
       }
 
+      let left;
+      if (shouldFlipX) {
+        left = buttonRect.right + window.scrollX - menuRect.width;
+      } else {
+        left = buttonRect.left + window.scrollX;
+      }
+
       setPositionStyles({
         position: 'absolute',
-        left: buttonRect.left + window.scrollX,
+        left: left,
         top: top,
-        width: buttonRect.width,
-        maxHeight: `${menuHeight?.height}px`,
+        maxHeight: `${menuRect?.height}px`,
       });
     };
 
     updatePosition();
 
+    const rafId = requestAnimationFrame(updatePosition);
+
     window.addEventListener('resize', updatePosition);
     window.addEventListener('scroll', updatePosition, { capture: true });
 
     return () => {
+      cancelAnimationFrame(rafId);
       window.removeEventListener('resize', updatePosition);
       window.removeEventListener('scroll', updatePosition, { capture: true });
     };
@@ -93,6 +105,7 @@ const TestDropdown: React.FC<DropdownProps> = ({
         ref={buttonRef}
         className="px-3 py-2 border rounded"
         onClick={() => {
+          if (isOpen) return;
           setOpen(true);
         }}
       >
@@ -103,7 +116,7 @@ const TestDropdown: React.FC<DropdownProps> = ({
           <ul
             ref={menuRef}
             style={positionStyles}
-            className="bg-white border shadow-lg overflow-auto z-50 inline-flex flex-col absolute"
+            className="bg-white border shadow-lg overflow-auto z-50 inline-flex flex-col absolute w-[400px]"
           >
             {options?.map((option) => (
               <li

@@ -64,18 +64,20 @@ const PracticeRefs = () => {
 
       <div className="border-b py-5">
         <h3>Test dropdown</h3>
-        <TestDropdown
-          options={[
-            { id: '1', label: 'Orange', value: 'orange' },
-            { id: '2', label: 'Apple', value: 'apple' },
-            { id: '3', label: 'Mango', value: 'mango' },
-          ]}
-          onChange={(value) => setDropdownValue(value)}
-          selectedValue={dropdownVale}
-          placeholder="Select ..."
-          isOpen={isOpenDropdown}
-          setOpen={(value) => setIsOpenDropdown(value)}
-        />
+        <div className="flex justify-end">
+          <TestDropdown
+            options={[
+              { id: '1', label: 'Orange', value: 'orange' },
+              { id: '2', label: 'Apple', value: 'apple' },
+              { id: '3', label: 'Mango', value: 'mango' },
+            ]}
+            onChange={(value) => setDropdownValue(value)}
+            selectedValue={dropdownVale}
+            placeholder="Select ..."
+            isOpen={isOpenDropdown}
+            setOpen={(value) => setIsOpenDropdown(value)}
+          />
+        </div>
       </div>
 
       <div className="border-b py-5">
