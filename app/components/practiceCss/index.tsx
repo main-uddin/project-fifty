@@ -63,6 +63,139 @@ const PracticeCss = () => {
         <div className="item9">9</div>
         <div className="item10">10</div>
       </div>
+
+      <div className="py-16"> AUTO-FILL AND AUTO-FIT</div>
+
+      <div className="auto-fit-fill">
+        <div className="item1"></div>
+        <div className="item2"></div>
+        <div className="item3"></div>
+        <div className="item4"></div>
+      </div>
+
+      <div className="py-20"></div>
+
+      <div className="card-container">
+        <div className="card-item1 p-5 rounded-lg border">
+          <div>
+            <img src="https://picsum.photos/300/200" alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error quod, cum rerum
+            maxime, fugit neque alias non aperiam quisquam perferendis reprehenderit facere quas
+            officia, eligendi sequi cumque consequuntur fuga.
+          </p>
+          <div className="flex justify-end items-center gap-2">
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Preview
+            </button>
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div className="card-item p-5 rounded-lg border">
+          <div>
+            <img src="https://picsum.photos/300/400" alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error quod, cum rerum
+            maxime, fugit neque alias non aperiam.
+          </p>
+          <div className="flex justify-end items-center gap-2">
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Preview
+            </button>
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div className="card-item p-5 rounded-lg border">
+          <div>
+            <img src="https://picsum.photos/200/200" alt="" />
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div className="flex justify-end items-center gap-2">
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Preview
+            </button>
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div className="card-item p-5 rounded-lg border">
+          <div>
+            <img src="https://picsum.photos/300/300" alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error quod, cum rerum
+            maxime, fugit neque alias non aperiam quisquam perferendis reprehenderit facere quas
+            officia
+          </p>
+          <div className="flex justify-end items-center gap-2">
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Preview
+            </button>
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div className="card-item p-5 rounded-lg border">
+          <div>
+            <img src="https://picsum.photos/300/300" alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error quod, cum rerum
+            maxime, fugit neque alias non aperiam quisquam perferendis.
+          </p>
+          <div className="flex justify-end items-center gap-2">
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Preview
+            </button>
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div className="card-item p-5 rounded-lg border">
+          <div>
+            <img src="https://picsum.photos/300/300" alt="" />
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error quod.</p>
+          <div className="flex justify-end items-center gap-2">
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Preview
+            </button>
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div className="card-item p-5 rounded-lg border">
+          <div>
+            <img src="https://picsum.photos/300/300" alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error quod, cum rerum
+            maxime, fugit neque alias non aperiam quisquam perferendis reprehenderit facere quas
+            officia, eligendi sequi cumque consequuntur fuga. Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Recusandae adipisci nam iusto placeat. Asperiores
+            accusantium neque minus maxime a sunt velit necessitatibus nulla, vero cum, voluptas
+            delectus repellat labore ipsa!
+          </p>
+          <div className="flex justify-end items-center gap-2">
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Preview
+            </button>
+            <button className="py-2 px-3 rounded text-lg font-medium leading-4 border">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
